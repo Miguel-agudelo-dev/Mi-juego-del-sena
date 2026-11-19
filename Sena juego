@@ -1,0 +1,32 @@
+print("hola sena")
+jugador = "sena"
+vida = 3
+
+print(jugador)
+print("tiene ", vida, "vidas")
+puntos = int(input("?cuantos puntos ganaste?: "))
+print("total puntos:", puntos)
+if puntos >= 10:
+    print("¡Subiste de nivel!")
+else:
+    print("Sigue practicando para subir de nivel.")
+vida = 3
+
+while vida > 0:
+    print("Sigues jugando. Vidas:", vida)
+    vida = vida - 1
+
+print("Game Over")
+import random
+
+secreto = random.randint(1, 5)
+vida = 2
+
+while vida > 0:
+    intento = int(input("Adivina (1 al 5): "))
+    if intento == secreto:
+        print("¡Ganaste!")
+        break
+    else:
+        vida = vida - 1
+        print("Fallaste. Vidas:", vida)
